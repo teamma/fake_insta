@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
+# AWS
 gem 'figaro'
 gem 'simple_form'
+gem 'fog'
 
 gem 'cancancan'
 
