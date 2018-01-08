@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'figaro'
+gem 'simple_form'
 
 gem 'cancancan'
 
