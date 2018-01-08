@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'figaro'
+
 gem 'cancancan'
 
 # 회원가입 기능
