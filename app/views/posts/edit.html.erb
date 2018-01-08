@@ -1,0 +1,8 @@
+<h1>Posts#edit</h1>
+<p>Find me in app/views/posts/edit.html.erb</p>
+<%= form_tag("/posts/#{@post.id}", method: "put", multipart: true) do %>
+  <%= text_field_tag("post[title]", @post.title) %>
+  <%= text_area_tag("post[content]", @post.content) %>
+  <%= file_field_tag("post[postimage]") %><br />
+  <%= submit_tag %>
+<% end %>

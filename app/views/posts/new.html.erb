@@ -1,0 +1,14 @@
+<!-- <form action="/posts" method="post" enctype="multipart/form-data">
+  <input type="text" name="title" /><br />
+  <textarea name="content"></textarea><br />
+  <input type="file" name="post[postimage]" /><br />
+  <input type="hidden" name="authenticity_token" value="<%# form_authenticity_token%>">
+  <input type="submit" />
+</form> -->
+<hr />
+<%= form_tag("/posts", method: "post", multipart: true) do %>
+  <%= text_field_tag("post[title]") %> <br />
+  <%= text_area_tag("post[content]") %> <br />
+  <%= file_field_tag("post[postimage]") %><br />
+  <%= submit_tag %>
+<% end %>

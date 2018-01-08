@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center mt-3">
+  <figure class="figure">
+    <img src="<%= @post.postimage%>" class="figure-img img-fluid rounded" style="height: 70vh;">
+    <figcaption class="figure-caption">
+      <p><%= @post.title %></p>
+      <p><%= @post.content %></p>
+    </figcaption>
+  </figure>
+</div>
+
+
+
+
+<!-- <% if can? :update, @post %> -->
+  <p><a href="/posts/<%=@post.id%>/edit">수정</a></p>
+<!-- <% end %> -->
+
+<!-- <% if can? :destroy, @post %> -->
+  <p><a href="/posts/<%=@post.id%>" data-method="delete" data-confirm="삭제할래?">삭제</a></p>
+<!-- <% end %> -->
+<!--  -->

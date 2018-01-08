@@ -1,0 +1,15 @@
+
+
+<%= link_to "새글쓰기", posts_new_path %>
+
+<% @posts.in_groups_of(3, false).each do |group| %>
+  <div class="row mt-3">
+  <% group.each do |post| %>
+    <div class="col-4">
+      <a href="/posts/<%=post.id%>">
+        <img src="<%=post.postimage.thumb%>" class="img-fluid">
+      </a>
+    </div>
+  <% end %>
+  </div>
+<% end %>
