@@ -7,8 +7,8 @@
   <% group.each do |post| %>
     <div class="col-4">
       <a href="/posts/<%=post.id%>">
-        <img src="<%=post.postimage.thumb%>" class="img-fluid">
-      </a>
+        <img src="<%=post.postimage.thumb%>" class="img-fluid"><br />
+      </a><%= post.user_id %><br /><%= post.title %>
     </div>
   <% end %>
   </div>

@@ -25,8 +25,7 @@ class PostsController < ApplicationController
 
   # Read
   def show
-    # @post = Post.find(params[:id])
-    # authorize! :read, @post
+    
   end
 
   # update
@@ -69,5 +68,5 @@ class PostsController < ApplicationController
     # 게시글의 주인, 로그인한 사람이 같지 않으면
     redirect_to '/' and return unless @post.user_id == current_user.id
     # redirect_to '/'
-    end
+  end
 end

@@ -1,4 +1,4 @@
-<%= form_for(@blog) do |f| %>
+<!-- <%= form_for(@blog) do |f| %>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -10,4 +10,24 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+<% end %> -->
+
+<hr />
+<div class="container">
+<%= form_tag("/blogs", method: "blog", multipart: true) do %>
+  <div class="form-group">
+    <%= label_tag(:blog_title, "제목")%>
+    <%= text_field_tag "blog[title]", "", class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:blog_content, "내용")%>
+    <%= text_area_tag("blog[content]", "", class: "form-control") %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:blog_blogimage, "첨부파일")%>
+    <%= file_field_tag("blog[blogimage]", class: "form-control") %><br />
+  </div>
+    <%= button_tag("제출", class: "btn btn-primary") %>
+  </div>
 <% end %>
+</div>

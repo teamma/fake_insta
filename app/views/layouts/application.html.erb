@@ -9,13 +9,17 @@
 </head>
 <body>
   <%= render 'layouts/navbar' %>
-<div class="container">
+  <%= render 'layouts/flash' %>
+<!-- <div class="container">
   <form action="/" class="form-inline my-2 my-lg-2">
     <input name="q" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
-</div>
+</div> -->
   <div class="container">
+    <div class="py-5 align-center">
+      <%= render 'layouts/search_form' %>
+    </div>
     <%= yield %>
   </div>
 <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>

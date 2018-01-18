@@ -1,8 +1,52 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<hr />
+<div class="container">
 <%= form_tag("/posts/#{@post.id}", method: "put", multipart: true) do %>
-  <%= text_field_tag("post[title]", @post.title) %>
-  <%= text_area_tag("post[content]", @post.content) %>
-  <%= file_field_tag("post[postimage]") %><br />
-  <%= submit_tag %>
+  <div class="form-group">
+    <%= label_tag(:post_title, "제목")%>
+    <%= text_field_tag "post[title]", @post.title, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:post_content, "내용")%>
+    <%= text_area_tag("post[content]", @post.content, class: "form-control") %>
+  </div>
+  <div class="form-group">
+    <%= label_tag(:post_postimage, "사진첨부")%>
+    <%= file_field_tag("post[postimage]", class: "form-control") %><br />
+  </div>
+  <div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+</div>
+<div class="custom-control custom-radio custom-control-inline">
+  <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+  <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+</div><br />
+<select class="custom-select">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select> <br />
+
+  <!-- <div class="form-group">
+    <%= label_tag("start")%>
+    <%= datetime_local_field_tag("", class: "form-control") %>~
+    <%= label_tag("end")%>
+    <%= datetime_local_field_tag("", class: "form-control") %><br />
+  </div> -->
+  <!-- <div class="dropdown show">
+    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Where?
+    </a>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <a class="dropdown-item">Seoul</a>
+      <a class="dropdown-item">Pusan</a>
+      <a class="dropdown-item">Daejeon</a>
+      <a class="dropdown-item">Kwangju</a>
+      <a class="dropdown-item">Daegu</a>
+      <a class="dropdown-item">Jeju</a>
+    </div>
+  </div> -->
+    <%= submit_tag("제출", class: "btn btn-submit") %>
+</div>
 <% end %>
