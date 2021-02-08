@@ -14,7 +14,7 @@ gem 'devise'
 gem 'kaminari'
 
 # 파일업로더
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 
 # 이미지편집
 gem 'mini_magick'
